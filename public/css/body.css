@@ -1,0 +1,35 @@
+.mayo{
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAFJJREFUKFONkMENACAIA2UB9p+TBTQl1oBKgh+wHo1Uxj5mNlVVeEeN2vMQwTh4QExHiD1hBwlBrPoE/hyhwcAd6FQtA6YPVnHccaV4qj9Cb4MLegBHtfZs7y0AAAAASUVORK5CYII='),url('/img/mayo.jpeg');
+  background-repeat: repeat;
+  background-blend-mode: multiply;
+  background-position: 0px ;
+  background-size: auto, cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0px;
+  left:0px;
+  z-index: -1;
+}
+
+@media screen and (max-width:640px) { 
+  .wrap{
+    background:none /*PC用の背景はオフ*/
+  }
+  .mayo::before{
+    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE1JREFUKFNjZCASMMLUff361RjE5ubmPotNDKwQpgimAKQYXQyrQmyuIU0hNuuRTQU5Be4ZXIphnkNRiK4YOQQwFMIUIysCiWFViM3XAGrEJUEOsen/AAAAAElFTkSuQmCC'),url('/img/mayo.jpeg');
+    background-repeat: repeat;
+    background-blend-mode: overlay;
+    background-position-x:40%;
+    background-size: auto, cover;
+    position: fixed;
+    content:""; 
+    display:block; 
+    width: 100%;
+    height: 100%;
+    top:0px;
+    left:0px;
+    z-index: -1;
+    }
+}
+

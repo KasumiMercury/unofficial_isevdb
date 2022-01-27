@@ -19,7 +19,7 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 });
 
 Route::put('/root/edit/{id}', 'App\Http\Controllers\PlayerController@edit')->name('player.edit');
-Route::POST('/{member}/add', 'App\Http\Controllers\PlayerController@add')->name('player.add');
+Route::POST('/{member}/add', 'App\Http\Controllers\PlayerController@add')->name('player.regist');
 Route::POST('/{member}/clip', 'App\Http\Controllers\PlayerController@clip')->name('player.clip');
 Route::get('/{member}/{cate}', 'App\Http\Controllers\PlayerController@cate')->name('player.cate');
 Route::get('/{member}/player/{id}', 'App\Http\Controllers\PlayerController@player')->name('player.player');

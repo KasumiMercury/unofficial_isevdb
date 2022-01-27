@@ -19,8 +19,8 @@
   </style>
 </head>
 <body style="background-color: {{$current_member -> MainCol}};font-family: {{$current_member -> Font}};">
-<header class="w-100 shadow">
-    <div class="w-80 m-auto">
+<header class="w-100">
+    <div class="w-80 shadow m-auto">
         <nav class="navbar p-3 p-md-5" style="background-color: {{$current_member -> NavCol}}">
             <h2 style="color: {{$current_member -> TitleCol}};font-family: {{$current_member -> TitleFont}}; ">Unofficial {{$current_member -> display}}DB</h2>
     </div>
@@ -37,7 +37,7 @@
       <buttongroup :members="{{$members}}"></buttongroup>
     </div>
   </div>
-  <div class="text-center" style="height: 100vh; width: 100vw; padding-top: 50vh;">
+  <div class="text-center" style="height: 100vh; width: 100%; padding-top: 50vh;">
     <p style="color:#E9546B;">※背景画像堪能用スペース</p>
   </div>
 </main>

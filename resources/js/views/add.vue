@@ -53,6 +53,9 @@ export default {
             Addstep2,
             Addstep3,
             Addstep4
+        },
+        scrollBehavior (to, from, savedPosition) {
+        return { x: 0, y: 0 }
         }
 }
 </script>

@@ -13,6 +13,9 @@ export default {
 			member: this.$route.params.member,
 		}
 	},
-    components: { PlayerModal }
+    components: { PlayerModal },
+	scrollBehavior (to, from, savedPosition) {
+	return { x: 0, y: 0 }
+	}
 };
 </script>

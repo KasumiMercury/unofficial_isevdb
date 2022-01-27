@@ -11,6 +11,111 @@
   left:0px;
   z-index: -1;
 }
+.ameru{
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE5JREFUKFNjZGBgMGZgYDjLgAAgPgigiDEiKQAxkTWhGICsEN1kFI0whegmIVsNlgMpxKYI5iKYO41JUojNE1ithllDlGewKcYIHqICHAARyRbX7SlXyQAAAABJRU5ErkJggg=='),url('/img/ame.jpeg');
+  background-repeat: repeat;
+  background-blend-mode: multiply;
+  background-position: 0px ;
+  background-size: auto, cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0px;
+  left:0px;
+  z-index: -1;
+}
+.temari{
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE5JREFUKFNjZGBgMGZgYDjLgAAgPgigiDEiKQAxkTWhGICsEN1kFI0whegmIVsNlgMpxKYI5iKYO41JUojNE1ithllDlGewKcYIHqICHAARyRbX7SlXyQAAAABJRU5ErkJggg=='),url('/img/temari.jpeg');
+  background-repeat: repeat;
+  background-blend-mode: overlay;
+  background-position-y:10%;
+  background-size: auto, cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0px;
+  left:0px;
+  z-index: -1;
+}
+.hana{
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE5JREFUKFNjZGBgMGZgYDjLgAAgPgigiDEiKQAxkTWhGICsEN1kFI0whegmIVsNlgMpxKYI5iKYO41JUojNE1ithllDlGewKcYIHqICHAARyRbX7SlXyQAAAABJRU5ErkJggg=='),url('/img/hana.jpeg');
+  background-repeat: repeat;
+  background-blend-mode: overlay;
+  background-position: 0;
+  background-size: auto, cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0px;
+  left:0px;
+  z-index: -1;
+}
+.kohaku{
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE5JREFUKFNjZGBgMGZgYDjLgAAgPgigiDEiKQAxkTWhGICsEN1kFI0whegmIVsNlgMpxKYI5iKYO41JUojNE1ithllDlGewKcYIHqICHAARyRbX7SlXyQAAAABJRU5ErkJggg=='),url('/img/waka.jpeg');
+  background-repeat: repeat;
+  background-blend-mode: overlay;
+  background-position-y: 20%;
+  background-size: auto, cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0px;
+  left:0px;
+  z-index: -1;
+}
+.konomi{
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE5JREFUKFNjZGBgMGZgYDjLgAAgPgigiDEiKQAxkTWhGICsEN1kFI0whegmIVsNlgMpxKYI5iKYO41JUojNE1ithllDlGewKcYIHqICHAARyRbX7SlXyQAAAABJRU5ErkJggg=='),url('/img/kono.jpeg');
+  background-repeat: repeat;
+  background-blend-mode: overlay;
+  background-position-y: 35%;
+  background-size: auto, cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0px;
+  left:0px;
+  z-index: -1;
+}
+.uru{
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE5JREFUKFNjZGBgMGZgYDjLgAAgPgigiDEiKQAxkTWhGICsEN1kFI0whegmIVsNlgMpxKYI5iKYO41JUojNE1ithllDlGewKcYIHqICHAARyRbX7SlXyQAAAABJRU5ErkJggg=='),url('/img/uru.png');
+  background-repeat: repeat;
+  background-blend-mode: overlay;
+  background-position-y: 35%;
+  background-size: auto, cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0px;
+  left:0px;
+  z-index: -1;
+}
+.komachi{
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE5JREFUKFNjZGBgMGZgYDjLgAAgPgigiDEiKQAxkTWhGICsEN1kFI0whegmIVsNlgMpxKYI5iKYO41JUojNE1ithllDlGewKcYIHqICHAARyRbX7SlXyQAAAABJRU5ErkJggg=='),url('/img/komachi.jpeg');
+  background-repeat: repeat;
+  background-blend-mode: overlay;
+  background-position-y: 35%;
+  background-size: auto, cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0px;
+  left:0px;
+  z-index: -1;
+}
+.nia{
+  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE5JREFUKFNjZGBgMGZgYDjLgAAgPgigiDEiKQAxkTWhGICsEN1kFI0whegmIVsNlgMpxKYI5iKYO41JUojNE1ithllDlGewKcYIHqICHAARyRbX7SlXyQAAAABJRU5ErkJggg=='),url('/img/nia.png');
+  background-repeat: repeat;
+  background-blend-mode: overlay;
+  background-position: 0;
+  background-size: auto, cover;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top:0px;
+  left:0px;
+  z-index: -1;
+}
+
 
 @media screen and (max-width:640px) { 
   .wrap{
@@ -31,5 +136,125 @@
     left:0px;
     z-index: -1;
     }
+    .ameru::before{
+      background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE5JREFUKFNjZGBgMGZgYDjLgAAgPgigiDEiKQAxkTWhGICsEN1kFI0whegmIVsNlgMpxKYI5iKYO41JUojNE1ithllDlGewKcYIHqICHAARyRbX7SlXyQAAAABJRU5ErkJggg=='),url('/img/ame.jpeg');
+      background-repeat: repeat;
+      background-blend-mode: overlay;
+      background-position-x:40%;
+      background-size: auto, cover;
+      position: fixed;
+      content:""; 
+      display:block; 
+      width: 100%;
+      height: 100%;
+      top:0px;
+      left:0px;
+      z-index: -1;
+      }
+      .temari::before{
+        background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE5JREFUKFNjZGBgMGZgYDjLgAAgPgigiDEiKQAxkTWhGICsEN1kFI0whegmIVsNlgMpxKYI5iKYO41JUojNE1ithllDlGewKcYIHqICHAARyRbX7SlXyQAAAABJRU5ErkJggg=='),url('/img/temari.jpeg');
+        background-repeat: repeat;
+        background-blend-mode: overlay;
+        background-position: 0;
+        background-size: auto, cover;
+        position: fixed;
+        content:""; 
+        display:block; 
+        width: 100%;
+        height: 100%;
+        top:0px;
+        left:0px;
+        z-index: -1;
+        }
+        .hana::before{
+          background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE5JREFUKFNjZGBgMGZgYDjLgAAgPgigiDEiKQAxkTWhGICsEN1kFI0whegmIVsNlgMpxKYI5iKYO41JUojNE1ithllDlGewKcYIHqICHAARyRbX7SlXyQAAAABJRU5ErkJggg=='),url('/img/hana.jpeg');
+          background-repeat: repeat;
+          background-blend-mode: overlay;
+          background-position-x:50%;
+          background-size: auto, cover;
+          position: fixed;
+          content:""; 
+          display:block; 
+          width: 100%;
+          height: 100%;
+          top:0px;
+          left:0px;
+          z-index: -1;
+          }        
+          .kohaku::before{
+            background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE5JREFUKFNjZGBgMGZgYDjLgAAgPgigiDEiKQAxkTWhGICsEN1kFI0whegmIVsNlgMpxKYI5iKYO41JUojNE1ithllDlGewKcYIHqICHAARyRbX7SlXyQAAAABJRU5ErkJggg=='),url('/img/waka.jpeg');
+            background-repeat: repeat;
+            background-blend-mode: overlay;
+            background-position-x:50%;
+            background-size: auto, cover;
+            position: fixed;
+            content:""; 
+            display:block; 
+            width: 100%;
+            height: 100%;
+            top:0px;
+            left:0px;
+            z-index: -1;
+            }
+            .konomi::before{
+              background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE5JREFUKFNjZGBgMGZgYDjLgAAgPgigiDEiKQAxkTWhGICsEN1kFI0whegmIVsNlgMpxKYI5iKYO41JUojNE1ithllDlGewKcYIHqICHAARyRbX7SlXyQAAAABJRU5ErkJggg=='),url('/img/kono.jpeg');
+              background-repeat: repeat;
+              background-blend-mode: overlay;
+              background-position-x:50%;
+              background-size: auto, cover;
+              position: fixed;
+              content:""; 
+              display:block; 
+              width: 100%;
+              height: 100%;
+              top:0px;
+              left:0px;
+              z-index: -1;
+              } 
+              .uru::before{
+                background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE5JREFUKFNjZGBgMGZgYDjLgAAgPgigiDEiKQAxkTWhGICsEN1kFI0whegmIVsNlgMpxKYI5iKYO41JUojNE1ithllDlGewKcYIHqICHAARyRbX7SlXyQAAAABJRU5ErkJggg=='),url('/img/uru.png');
+                background-repeat: repeat;
+                background-blend-mode: overlay;
+                background-position-x:50%;
+                background-size: auto, cover;
+                position: fixed;
+                content:""; 
+                display:block; 
+                width: 100%;
+                height: 100%;
+                top:0px;
+                left:0px;
+                z-index: -1;
+                }
+                .komachi::before{
+                  background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE5JREFUKFNjZGBgMGZgYDjLgAAgPgigiDEiKQAxkTWhGICsEN1kFI0whegmIVsNlgMpxKYI5iKYO41JUojNE1ithllDlGewKcYIHqICHAARyRbX7SlXyQAAAABJRU5ErkJggg=='),url('/img/komachi.jpeg');
+                  background-repeat: repeat;
+                  background-blend-mode: overlay;
+                  background-position-x:50%;
+                  background-size: auto, cover;
+                  position: fixed;
+                  content:""; 
+                  display:block; 
+                  width: 100%;
+                  height: 100%;
+                  top:0px;
+                  left:0px;
+                  z-index: -1;
+                  }
+                  .nia::before{
+                    background-image: url('data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAoAAAAKCAYAAACNMs+9AAAAAXNSR0IArs4c6QAAAE5JREFUKFNjZGBgMGZgYDjLgAAgPgigiDEiKQAxkTWhGICsEN1kFI0whegmIVsNlgMpxKYI5iKYO41JUojNE1ithllDlGewKcYIHqICHAARyRbX7SlXyQAAAABJRU5ErkJggg=='),url('/img/nia.png');
+                    background-repeat: repeat;
+                    background-blend-mode: overlay;
+                    background-position-x:50%;
+                    background-size: auto, cover;
+                    position: fixed;
+                    content:""; 
+                    display:block; 
+                    width: 100%;
+                    height: 100%;
+                    top:0px;
+                    left:0px;
+                    z-index: -1;
+                    }
 }
 

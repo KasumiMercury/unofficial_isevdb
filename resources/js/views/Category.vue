@@ -9,13 +9,13 @@
 			</b-card-header>
 			<b-collapse id="accordion-1" accordion="my-accordion" role="tabpanel">
 				<b-card-body>
-					<p class="m-2">いせぶい{{current_member.display}}非公式DBは、「異世界転生してVになりました。」、略して「いせぶい」に所属する{{current_member.display}}の可愛い声や面白いエピソード、恋惡まよのファンであるま族が作った切り抜きを共有するデータベース（DB)です。</p>
+					<p class="m-2">いせぶい{{current_member.display}}非公式DBは、「異世界転生してVになりました。」、略して「いせぶい」に所属する{{current_member.display}}の可愛い声や面白いエピソード、ファンが作った切り抜きを共有するデータベース（DB)です。</p>
 					<p class="m-2">本DBはYouTube{{current_member.display}}チャンネル、またはYouTubeにアップロードされた切り抜きの動画リンクを直接共有します。</p>
 					<p class="m-2">このサイトで再生されるとダイレクトに本人のチャンネルにて再生回数が計上されます。</p>
 					<p  class="m-2" style="color:#E73275;font-weight:bold">動画リンクの登録はどなたでも可能です。是非、「ここの声マジ最高！」とか「このエピソード好き」や作成した切り抜きを登録してください。</p>
 					<p class="m-2">本DBがみなさんの推し活や彼女の活動の支えになりえることを願います。</p>
 					<p class="m-2">Twitter共有ボタンもあるので是非ご利用ください。</p>
-					<p  class="m-2" :style="'color: #E9546B'">アップデートで個別のプレイヤー画面が設置しました。</p>
+					<p  class="m-2" :style="'color: #E9546B'">アップデートで個別のプレイヤー画面を設置しました。</p>
 					<p  class="m-2">製作者の時間的都合、というより根気的問題で開発は超スローペースですが今後機能拡充やデザインの改善等行います。</p>
 					<p class="m-2">不具合やこんな機能あると嬉しい等ございましたら、下のTwitterボタンから製作者にメンションをいただけると幸いです。</p>
 				</b-card-body>
@@ -109,7 +109,11 @@ export default {
 				'--BtnCol': this.current_member.BtnCol
 			}
 			}
+		},
+		scrollBehavior (to, from, savedPosition) {
+		return { x: 0, y: 0 }
 		}
+		
 }
 </script>
 <style lang="scss" scoped>

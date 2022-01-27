@@ -368,6 +368,9 @@ import Step4Modal from './add_step4.vue'
         components: {
             StampModal,
             Step4Modal,
+        },
+        scrollBehavior (to, from, savedPosition) {
+        return { x: 0, y: 0 }
         }
     }
 </script>

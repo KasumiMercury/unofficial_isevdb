@@ -67,7 +67,7 @@ export default {
 			axios.get('/api/root/player/' + this.id)
 				.then(response => this.player = response.data.data)
 				.catch(error => console.log(error));
-			this.Tweet["url"] = "http://127.0.0.1:8000/"+this.member+"/player/"+this.id
+			this.Tweet["url"] = "https://isevdb.sakura.ne.jp//"+this.member+"/player/"+this.id
 			this.Tweet["title"] = "いせぶい非公式:"+this.current_member.display+"DB No."+this.id
 			this.Tweet["hash"] = "いせぶい非公式DB,"+this.current_member.display+"非公式DB,"+this.current_member.display
 		},

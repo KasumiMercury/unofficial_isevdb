@@ -28,8 +28,8 @@
 			</b-card-header>
 			<b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
 				<b-card-body>
-					<b-button class="m-1" :style="'background-color: #c4302b; border-color:#c4302b;'" href="https://www.youtube.com/channel/UCjlO0QCarccGehZqm6rhnSQ">{{current_member.display}}　YouTube</b-button>
-					<b-button class="m-1" :style="'background-color: #00acee; border-color:#00acee;'" href="https://twitter.com/koaku_mayo">{{current_member.display}}　Twitter</b-button>
+					<b-button class="m-1" :style="'background-color: #c4302b; border-color:#c4302b;'" :href="current_member.YTaccount">{{current_member.display}}　YouTube</b-button>
+					<b-button class="m-1" :style="'background-color: #00acee; border-color:#00acee;'" :href="current_member.TWaccount">{{current_member.display}}　Twitter</b-button>
 				</b-card-body>
 			</b-collapse>
 			</b-card>

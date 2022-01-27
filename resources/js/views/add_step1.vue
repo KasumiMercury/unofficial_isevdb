@@ -1,6 +1,12 @@
 <template>
         <div id="app">
-            <b-form-group label="YouTubeURLを入力してください">
+                <h3 class="m-2">YouTubeのURLを入力してください</h3>
+            <b-form-group>
+                <div class="m-2" style="color:#E9546B;">
+                <p>YouTubeで「共有」ボタンからURLを取得すると確実です。</p>
+                <p>ちなみにYouTube内の「共有」から共有するとAnalyticsに反映されるそうです。</p>
+                </div>
+
                 <b-form-input type="text" class="form-control" v-model="YTurl" placeholder="YouTube URL"></b-form-input>
                 <b-button class="m-5" @click="submit">OK!!</b-button>
             </b-form-group>

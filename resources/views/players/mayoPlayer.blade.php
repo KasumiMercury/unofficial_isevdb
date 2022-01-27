@@ -40,6 +40,10 @@
   <div class="text-center" style="height: 100vh; width: 100%; padding-top: 50vh;">
     <p style="color:#E9546B;">※背景画像堪能用スペース</p>
   </div>
+  <div class="text-center" style="margin-bottom: 15vh; background-color: {{$current_member -> MainCol}};">
+      <p>当サイト内コンテンツの著作権及び肖像権は、<br> すべて、個人VTuberグループ「いせぶい」 <br> 及び所属メンバーに帰属します。</p>
+      <p>管理人：@Mmazoku_media</p>
+  </div>
 </main>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 <script src="{{ mix('js/app.js') }}"></script> 

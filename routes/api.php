@@ -18,6 +18,9 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
     return $request->user();
 });
 
+
+Route::get('/home', 'App\Http\Controllers\PlayerController@home')->name('home.info');
+Route::get('/top/player/{id}', 'App\Http\Controllers\PlayerController@topPlayer')->name('player.top');
 Route::put('/root/edit/{id}', 'App\Http\Controllers\PlayerController@edit')->name('player.edit');
 Route::POST('/{member}/add', 'App\Http\Controllers\PlayerController@add')->name('player.regist');
 Route::POST('/{member}/clip', 'App\Http\Controllers\PlayerController@clip')->name('player.clip');

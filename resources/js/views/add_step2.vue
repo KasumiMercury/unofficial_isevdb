@@ -6,13 +6,17 @@
             </b-aspect>
         </b-card>
         <div>
-            <b-button class="m-3" @click="pauseVideo" v-if="playing">pause</b-button>
-            <b-button class="m-3" @click="playVideo" v-else>play</b-button>
-            <div class="w-100">
-                <b-button @click="next">この動画で進む</b-button>
+            <b-button class="m-3" size="lg" @click="pauseVideo" v-if="playing">pause</b-button>
+            <b-button class="m-3" size="lg" @click="playVideo" v-else>play</b-button>
+            <div class="mt-3">
+                <b-button size="lg" @click="next">この動画で進む</b-button>
+            </div>
+            <div class="mt-3">
+                <b-button size="lg" class="m-2" @click="AddClip">切り抜きの登録はこちらから！</b-button>
+            </div>
+            <div class="mt-3">
                 <b-button @click="back">戻る</b-button>
             </div>
-            <b-button class="m-2" @click="AddClip">切り抜きの登録はこちらから！</b-button>
         </div>
         <modal name="error-modal">
                 <div  :height="30" :width="'50%'">
@@ -125,9 +129,6 @@ import AddClipping from './add_clipping.vue'
         },
         components: {
             AddClipping
-        },
-        scrollBehavior (to, from, savedPosition) {
-        return { x: 0, y: 0 }
         }
     }
 </script>

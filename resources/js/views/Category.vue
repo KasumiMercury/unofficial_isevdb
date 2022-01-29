@@ -17,7 +17,7 @@
 					<p class="m-2">Twitter共有ボタンもあるので是非ご利用ください。</p>
 					<p  class="m-2" :style="'color: #E9546B'">アップデートで個別のプレイヤー画面を設置しました。</p>
 					<p  class="m-2">製作者の時間的都合、というより根気的問題で開発は超スローペースですが今後機能拡充やデザインの改善等行います。</p>
-					<p class="m-2">不具合やこんな機能あると嬉しい等ございましたら、下のTwitterボタンから製作者にメンションをいただけると幸いです。</p>
+					<p class="m-2">不具合やこんな機能あると嬉しい等ございましたら、管理人にTwitterにてメンションをいただけると幸いです。</p>
 				</b-card-body>
 			</b-collapse>
 			</b-card>
@@ -40,7 +40,7 @@
 			</b-card-header>
 			<b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
 				<b-card-body>
-					<p>まず「Voice」「Episode」などからカテゴリーを選びます。</p>
+					<p>まず「Voice」「Episode」などからカテゴリーを選び、</p>
 					<p>リストから見たいものの「Player」ボタンを押すとプレイヤー画面に飛びます。</p>
 					<p>スマホの場合はリストを横にスライドできます。</p>
 					<p>「Title」「Date」「PlayerID」の見出しをタップすると昇順・降順に並び替えができます。</p>
@@ -109,9 +109,6 @@ export default {
 				'--BtnCol': this.current_member.BtnCol
 			}
 			}
-		},
-		scrollBehavior (to, from, savedPosition) {
-		return { x: 0, y: 0 }
 		}
 		
 }

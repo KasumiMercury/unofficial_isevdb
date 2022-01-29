@@ -4,8 +4,14 @@
             <h1 class="mb-5">データ追加/<br>切り抜き・タイムスタンプ支援ツール</h1>
             <Addstep1 v-if="stepNumber === 1" @addURL="updateURL" :member="current_member"></Addstep1>
             <Addstep2 v-if="stepNumber === 2" v-bind:form="form" :members="members" :current_member="current_member" v-on:from-child="updateURL" v-on:from-child1="nextStep" v-on:from-child2="backStep"></Addstep2>
-            <Addstep3 v-if="stepNumber === 3" v-bind:form="form" :categories="categories" :current_member="current_member" v-on:from-child2="backStep" ></Addstep3>
-	    </b-card>
+            <Addstep3 v-if="stepNumber === 3" v-bind:form="form" :categories="categories" :current_member="current_member" v-on:from-child2="reset" ></Addstep3>
+	    
+        	<div class="mt-5">
+				<b-button class="p-3 px-5" v-on:click="$router.push('/'+current_member.name+'/1')">
+					-> Data List
+				</b-button>
+			</div>
+        </b-card>
     </div>
 </template>
 <script>
@@ -44,6 +50,9 @@ export default {
             backStep(){
 		        this.stepNumber--;
             },
+            reset(){
+		        this.stepNumber = 1;
+            },
             nextStep(){
 		        this.stepNumber++;
             }
@@ -53,9 +62,6 @@ export default {
             Addstep2,
             Addstep3,
             Addstep4
-        },
-        scrollBehavior (to, from, savedPosition) {
-        return { x: 0, y: 0 }
         }
 }
 </script>

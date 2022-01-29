@@ -12,26 +12,20 @@
                 <b-button v-if="isPaste == true" :pressed.sync="isPaste" variant="primary">このサイトで設定</b-button>
                 <b-button v-else :pressed.sync="isPaste" variant="primary">貼り付けで取得</b-button>
             </div>
+            <div>
             <b-button class="m-1" v-if="isPaste == false" @click="getTime">現在位置を取得</b-button>
-            
-            <b-row class="my-3" align-v="center">
-                <b-col>
-                     <b-button size="sm" class="p-1" @click="SSMinus">-10秒</b-button>
-                </b-col>
-                <b-col>
-                     <b-button size="sm" class="p-1" @click="SMinus">-1秒</b-button>
-                </b-col>
-                <b-col>
-                    <b-button size="lg" class="p-1" @click="pauseVideo" v-if="playing">pause</b-button>
-                    <b-button size="lg" class="p-1" @click="playVideo" v-else>play</b-button>
-                </b-col>
-                <b-col>
-                     <b-button size="sm" class="p-1" @click="SPlus">+1秒</b-button>
-                </b-col>
-                <b-col>
-                     <b-button size="sm" class="p-1" @click="SSPlus">+10秒</b-button>
-                </b-col>
-            </b-row>
+            </div>
+
+            <div class="mt-3">
+            <b-button-group size="lg">   
+                <b-button class="p-1" @click="SSMinus">-10秒</b-button>
+                <b-button class="p-1" @click="SMinus">-1秒</b-button>
+                <b-button size="lg" class="p-1" @click="pauseVideo" v-if="playing">pause</b-button>
+                <b-button size="lg" class="p-1" @click="playVideo" v-else>play</b-button>
+                <b-button class="p-1" @click="SPlus">+1秒</b-button>
+                <b-button class="p-1" @click="SSPlus">+10秒</b-button>
+            </b-button-group>
+            </div>
 
             <b-row class="justify-content-md-center my-5" align-v="end">
                 <b-col>
@@ -368,9 +362,6 @@ import Step4Modal from './add_step4.vue'
         components: {
             StampModal,
             Step4Modal,
-        },
-        scrollBehavior (to, from, savedPosition) {
-        return { x: 0, y: 0 }
         }
     }
 </script>

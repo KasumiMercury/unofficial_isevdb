@@ -31,8 +31,11 @@
 				</ShareNetwork>
 				</div>
 				<div class="d-grid m-3">
-				<b-button size="lg" class="p-3" v-on:click="$router.push('/'+member+'/'+playerInfo.cate_id)">
-					-> Data List
+				<b-button size="lg" class="p-3" v-on:click="$router.push('/')">
+					-> 非公式いせぶいDBトップ
+				</b-button>
+				<b-button size="lg" class="my-2 p-3" v-on:click="memberDB(current_member.name)">
+					-> このメンバーのDB
 				</b-button>
 				</div>
 			</b-card-body>   
@@ -43,7 +46,8 @@
                 <p>送信完了しました！</p>
                 <p>ご協力ありがとうございます！</p>
             </div>
-            <b-button class="m-3" v-on:click="$router.push('/'+current_member.name+'/1')">トップへ</b-button>
+            <b-button class="m-3" v-on:click="memberDB(current_member.name)">このメンバーのDB</b-button>
+            <b-button class="m-3" v-on:click="$router.push('/')">非公式いせぶいDBトップ</b-button>
             <b-button class="m-3" @click="hidecomp">閉じる</b-button>
         </modal>
 	</div>
@@ -51,12 +55,17 @@
 <script>
 import EditModal from './edit.vue'
 export default {
-		props:["id","current_member"],
+		props:[],
 		data(){
 			return{
-				Tweet:{},
-				member: this.$route.params.member,
+				Tweet:{
+                    url: "",
+                    title: "",
+                    hash: ""
+                },
+                id: this.$route.params.id,
 				playerInfo:[],
+                current_member:[],
                 iframe_F:'<iframe width="560" height="315" src="https://www.youtube.com/embed/',
                 iframe_S:'?start=',
                 iframe_E:'&end=',
@@ -65,16 +74,17 @@ export default {
 		},
 		created(){
 			var self = this
-			axios.get('/api/root/player/' + this.id)
+			axios.get('/api/top/player/' + this.id)
 				.then(function(response){
-					self.playerInfo = response.data.data
+					self.playerInfo = response.data.player
+                    self.current_member = response.data.player.member
 					let tag = self.iframe_F+self.playerInfo.VideoID+self.iframe_S+self.playerInfo.start+self.iframe_E+self.playerInfo.end+self.iframe_L
 					document.getElementById('Wrapper').innerHTML = tag
+                    self.Tweet["url"] = "https://isevdb.sakura.ne.jp/"+self.member+"/player/"+self.id
+                    self.Tweet["title"] = "いせぶい非公式:"+self.current_member.display+"DB No."+self.id
+                    self.Tweet["hash"] = "いせぶい非公式DB,"+self.current_member.display+"非公式DB,"+self.current_member.display
 				})
 				.catch(error => console.log(error));
-			this.Tweet["url"] = "https://isevdb.sakura.ne.jp/"+this.member+"/player/"+this.id
-			this.Tweet["title"] = "いせぶい非公式:"+this.current_member.display+"DB No."+this.id
-			this.Tweet["hash"] = "いせぶい非公式DB,"+this.current_member.display+"非公式DB,"+this.current_member.display
 		},
 		methods: {
 			show() {
@@ -89,7 +99,10 @@ export default {
 			},
 			hidecomp() {
 			this.$modal.hide('completed');
-			}
+			},
+            memberDB(member){
+                location.href='/'+member+'/1'
+            }
 		},
         computed:{
             player(){

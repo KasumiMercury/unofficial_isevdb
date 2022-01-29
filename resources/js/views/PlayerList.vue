@@ -38,7 +38,6 @@ export default {
 		props:['current_member'],
 		data(){
 			return{
-    			showContent: false,
 				member: this.$route.params.member,
 				cate: this.$route.params.cate,
 

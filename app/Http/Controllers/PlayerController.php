@@ -11,6 +11,26 @@ use Illuminate\Support\Facades\DB;
 
 class PlayerController extends Controller
 {
+    public function home()
+    {
+        $members = Member::all();
+        $players = mayo::with('Member')->get();
+        
+        return [
+            'members' => $members,
+            'players' => $players
+        ];
+
+    }
+    public function topPlayer($id)
+    {
+        $player = mayo::with('Member')->where('id',$id)->first();
+        
+        return [
+            'player' => $player
+        ];
+
+    }
     public function index($member,$cate)
     {
         $categories = Category::all();

@@ -2,19 +2,17 @@
 <html lang="ja">
 <head>
     <meta charset="UTF-8">
-    <meta name="csrf-token" content="{{ csrf_token() }}">
-    <title>Example</title>
-<link rel="stylesheet" href="{{ mix('css/app.css') }}">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Unofficial いせぶいDB</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ mix('css/app.css') }}">
 </head>
 <body>
-
     <div id="app">
-        <div id="nav">
-          <router-link to="/mayo/player/1">Home</router-link>
+        <div class="container">
+            <router-view></router-view>
         </div>
-        <router-view></router-view>
     </div>
-
 <script src="{{ mix('js/app.js') }}"></script> 
 </body>
 </html>

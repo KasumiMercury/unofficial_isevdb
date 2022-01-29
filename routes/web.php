@@ -12,14 +12,18 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
+Route::get('/', function () {
+    return view('welcome');
+});
+Route::get('/top/player/{id}', function () {
+    return view('welcome');
+});
+
 Route::get('{member}/add', 'App\Http\Controllers\PlayerController@addindex')->name('player.add');
-Route::get('{member}/{cate?}', 'App\Http\Controllers\PlayerController@index')->name('player.index');
-Route::get('{member}/player/{id?}', 'App\Http\Controllers\PlayerController@index')->name('player.share');
+Route::get('{member}/{cate}', 'App\Http\Controllers\PlayerController@index')->name('player.index');
+Route::get('{member}/player/{id}', 'App\Http\Controllers\PlayerController@index')->name('player.share');
 /*
 Route::get('mayo/player/{cate?}', function () {
     return view('players/mayoPlayer');
 });
 */
-Route::get('/', function () {
-    return view('welcome');
-});

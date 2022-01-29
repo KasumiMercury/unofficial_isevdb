@@ -5,7 +5,7 @@
 		<div class="accordion my-1" role="tablist">
 			<b-card no-body class="mb-1" :style="'background-color:'+current_member.SubCol+';'">
 			<b-card-header header-tag="header" class="p-1 d-grid" role="tab" >
-				<b-button v-b-toggle.accordion-1 class="btn" :style="'background-color:'+current_member.BtnCol +';'">非公式{{current_member.display}}DBとは</b-button>
+				<b-button v-b-toggle.accordion-1 class="btn" :style="'background-color:'+current_member.BtnCol +';'">非公式{{current_member.display}}DBとは　<i class="fas fa-chevron-down"></i></b-button>
 			</b-card-header>
 			<b-collapse id="accordion-1" accordion="my-accordion" role="tabpanel">
 				<b-card-body>
@@ -24,7 +24,7 @@
 
 			<b-card no-body class="mb-1" :style="'background-color:'+current_member.SubCol+';'">
 			<b-card-header header-tag="header" class="p-1 d-grid" role="tab">
-				<b-button v-b-toggle.accordion-2 class="btn" :style="'background-color:'+current_member.BtnCol +';'">{{current_member.display}} info</b-button>
+				<b-button v-b-toggle.accordion-2 class="btn" :style="'background-color:'+current_member.BtnCol +';'">{{current_member.display}} info　<i class="fas fa-chevron-down"></i></b-button>
 			</b-card-header>
 			<b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
 				<b-card-body>
@@ -36,7 +36,7 @@
 
 			<b-card no-body class="mb-1" :style="'background-color:'+current_member.SubCol+';'">
 			<b-card-header header-tag="header" class="p-1 d-grid" role="tab">
-				<b-button v-b-toggle.accordion-3 class="btn" :style="'background-color:'+current_member.BtnCol +';'">How to use</b-button>
+				<b-button v-b-toggle.accordion-3 class="btn" :style="'background-color:'+current_member.BtnCol +';'">How to use　<i class="fas fa-chevron-down"></i></b-button>
 			</b-card-header>
 			<b-collapse id="accordion-3" accordion="my-accordion" role="tabpanel">
 				<b-card-body>
@@ -48,9 +48,7 @@
 					
 					<div class="d-grid mx-2 my-5">
 					<p class="my-1">データ登録はこちらから！</p>
-						<button class="btn p-2" :style="'background-color:'+current_member.BtnCol +'; border-color'+current_member.BtnCol +';'" v-on:click="$router.push('/'+member+'/add')">
-							データを追加/<br>
-							切り抜き・タイムスタンプ支援ツール
+						<button class="btn p-2" :style="'background-color:'+current_member.BtnCol +'; border-color'+current_member.BtnCol +';'" v-on:click="$router.push('/'+member+'/add')"><i class="fas fa-folder-plus"></i>　データを追加/<br>切り抜き・タイムスタンプ支援ツール
 						</button>
 					</div>   
 				</b-card-body>
@@ -80,9 +78,7 @@
 						</div>
 					</div>
 					<div class="d-grid m-3">
-						<button class="btn p-2" v-on:click="$router.push('/'+member+'/add')">
-							データを追加/<br>
-							切り抜き・タイムスタンプ支援ツール
+						<button class="btn p-2" v-on:click="$router.push('/'+member+'/add')"><i class="fas fa-folder-plus"></i>　データを追加/<br>切り抜き・タイムスタンプ支援ツール
 						</button>
 					</div>   
 			</b-card-body>   

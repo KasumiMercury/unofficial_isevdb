@@ -3,7 +3,7 @@
 		<div class="my-5">
 			<b-card class="text-center shadow">
 				<b-card-header header-tag="header" class="p-1 d-grid" role="tab" >
-					<b-button v-b-toggle.accordion-1>非公式いせぶいDBとは</b-button>
+					<b-button v-b-toggle.accordion-1>非公式いせぶいDBとは　<i class="fas fa-chevron-down"></i></b-button>
 				</b-card-header>
 				<b-collapse id="accordion-1" accordion="my-accordion" role="tabpanel">
 					<b-card-body>
@@ -24,7 +24,7 @@
 		<div class="my-5">
 			<b-card class="text-center shadow">
 				<b-card-header header-tag="header" class="p-1 d-grid" role="tab" >
-					<b-button v-b-toggle.accordion-2>そもそもいせぶいって？</b-button>
+					<b-button v-b-toggle.accordion-2>そもそもいせぶいって？　<i class="fas fa-chevron-down"></i></b-button>
 				</b-card-header>
 				<b-collapse id="accordion-2" accordion="my-accordion" role="tabpanel">
 					<b-card-body>
@@ -80,7 +80,7 @@
 						</b-button>
 						<b-button v-else-if="data.item.status == 1" size="sm" class="member" v-on:click="$router.push('/top/player/'+data.item.id)"> MemberOnly
 						</b-button>
-						<b-button v-else size="sm" class="play" v-on:click="$router.push('/top/player/'+data.item.id)"> Player
+						<b-button v-else size="sm" class="play" v-on:click="$router.push('/top/player/'+data.item.id)"><i class="fas fa-play fa-fw"></i> Player
 						</b-button>
 					</template>
 					<template #cell(edit)="data">

@@ -16,11 +16,11 @@
 				 {{ data.item.date | moment("YYYY/MM/DD")  }}
 			</template>
 			<template #cell(play)="data">
-				<b-button v-if="data.item.status == 2" disabled size="sm"> private
+				<b-button v-if="data.item.status == 2" disabled size="sm"><i class="fas fa-times fa-fw"></i> private
 				</b-button>
-				<b-button v-else-if="data.item.status == 1" size="sm" class="member" v-on:click="$router.push('/'+member+'/player/'+data.item.id)"> MemberOnly
+				<b-button v-else-if="data.item.status == 1" size="sm" class="member" v-on:click="$router.push('/'+member+'/player/'+data.item.id)"><i class="fas fa-play fa-fw"></i> MemberOnly
 				</b-button>
-				<b-button v-else size="sm" class="play" v-on:click="$router.push('/'+member+'/player/'+data.item.id)"> Player
+				<b-button v-else size="sm" class="play" v-on:click="$router.push('/'+member+'/player/'+data.item.id)"><i class="fas fa-play fa-fw"></i> Player
 				</b-button>
 			</template>
 			<template #cell(edit)="data">

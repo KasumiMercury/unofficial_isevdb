@@ -7,8 +7,7 @@
             <Addstep3 v-if="stepNumber === 3" v-bind:form="form" :categories="categories" :current_member="current_member" v-on:from-child2="reset" ></Addstep3>
 	    
         	<div class="mt-5">
-				<b-button class="p-3 px-5" v-on:click="$router.push('/'+current_member.name+'/1')">
-					-> Data List
+				<b-button class="p-3 px-5" v-on:click="$router.push('/'+current_member.name+'/1')"><i class="fas fa-database"></i>　リストに戻る
 				</b-button>
 			</div>
         </b-card>

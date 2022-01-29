@@ -17,25 +17,23 @@
 					<p>{{playerInfo.VideoTitle}}</p>
 					<p>投稿日：{{playerInfo.date}}</p>
 				</div>
+				
 				<div class="d-grid m-3">
-
 				<ShareNetwork
 					network="twitter"
 					:url="Tweet.url"
 					:title="Tweet.title"
 					:hashtags="Tweet.hash"
+					:class="'d-grid m-3 text-decoration-none'"
 					>
-				<div class="d-grid m-3">
-				<b-button class="p-3 mt-3 btn-Tweet">Tweet</b-button>
-				</div>
+					<b-button class="p-3 mt-3 btn-Tweet text-decoration-none" :style="'text-decoration: none;'"><i class="fas fa-share-square"></i>　Tweet</b-button>
 				</ShareNetwork>
 				</div>
+
 				<div class="d-grid m-3">
-				<b-button size="lg" class="p-3" v-on:click="$router.push('/')">
-					-> 非公式いせぶいDBトップ
+				<b-button size="lg" class="p-3" v-on:click="$router.push('/')"><i class="fas fa-home"></i>　非公式いせぶいDBトップへ
 				</b-button>
-				<b-button size="lg" class="my-2 p-3" v-on:click="memberDB(current_member.name)">
-					-> このメンバーのDB
+				<b-button size="lg" class="my-2 p-3" v-on:click="memberDB(current_member.name)"><i class="fas fa-database"></i>　このメンバーのDB
 				</b-button>
 				</div>
 			</b-card-body>   

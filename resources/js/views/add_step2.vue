@@ -6,20 +6,20 @@
             </b-aspect>
         </b-card>
         <div>
-            <b-button class="m-3" size="lg" @click="pauseVideo" v-if="playing">pause</b-button>
-            <b-button class="m-3" size="lg" @click="playVideo" v-else>play</b-button>
+            <b-button class="m-3" size="lg" @click="pauseVideo" v-if="playing" style="background-color: #c4302b; border-color:#c4302b;"><i class="fas fa-pause fa-fw"></i> PAUSE</b-button>
+            <b-button class="m-3" size="lg" @click="playVideo" v-else style="background-color: #c4302b; border-color:#c4302b;"><i class="fas fa-play fa-fw"></i> PLAY</b-button>
             <div class="mt-3">
-                <b-button size="lg" @click="next">この動画で進む</b-button>
+                <b-button size="lg" variant="primary" @click="next"><i class="fas fa-check-circle"></i> この動画で進む</b-button>
             </div>
             <div class="mt-3">
-                <b-button size="lg" class="m-2" @click="AddClip">切り抜きの登録はこちらから！</b-button>
+                <b-button size="lg" variant="success" class="m-2" @click="AddClip">切り抜きの登録はこちらから！<i class="fas fa-cloud-upload-alt"></i></b-button>
             </div>
             <div class="mt-3">
-                <b-button @click="back">戻る</b-button>
+                <b-button @click="back"><i class="fas fa-arrow-circle-left"></i> 戻る</b-button>
             </div>
         </div>
-        <modal name="error-modal">
-                <div  :height="30" :width="'50%'">
+        <modal height="auto" name="error-modal" :scrollable="true" :resizable="true">
+                <div class="w-70">
                     <h2 class="m-4">エラー</h2>
                     <div class="w-100">
                         <p class="my-2">このサイトでは以下のチャンネル以外の<br>動画の取り扱いをお断りしています</p>

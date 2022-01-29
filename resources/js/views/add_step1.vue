@@ -8,11 +8,11 @@
                 </div>
 
                 <b-form-input type="text" class="form-control" v-model="YTurl" placeholder="YouTube URL"></b-form-input>
-                <b-button class="m-5" @click="submit">OK!!</b-button>
+                <b-button class="m-5" size="lg" variant="primary" @click="submit"><i class="fas fa-check-circle"></i> OK!!</b-button>
             </b-form-group>
 
-            <b-button v-if="Search == false" @click="search_video" v-b-toggle.collapse class="m-1">新着動画から選択する</b-button>
-            <b-button v-else  @click="search_video_shut" v-b-toggle.collapse class="m-1">閉じる</b-button>
+            <b-button v-if="Search == false" size="lg" variant="success" @click="search_video" v-b-toggle.collapse class="m-1"><i class="fas fa-list"></i> 新着動画から選択する</b-button>
+            <b-button v-else size="lg"  @click="search_video_shut" v-b-toggle.collapse class="m-1"><i class="fas fa-window-close"></i> 閉じる</b-button>
 
                 <b-collapse id="collapse">
                     <b-card>
@@ -20,12 +20,13 @@
                         <b-table
                             responsive
                             :items="results" :fields="fields"
+			                :style="'white-space : nowrap;'"
                             >
                             <template #cell(img)="data">
                                 <img width="120" height="90" v-bind:src="data.item.snippet.thumbnails.default.url">
                             </template>
                             <template #cell(button)="data">
-                                <b-button @click="SelectVideo(data.item.id.videoId,data.item.snippet.title,data.item.snippet.publishTime)">選択</b-button>
+                                <b-button variant="success" @click="SelectVideo(data.item.id.videoId,data.item.snippet.title,data.item.snippet.publishTime)">選択</b-button>
                             </template>
                         </b-table>
                     </b-card>

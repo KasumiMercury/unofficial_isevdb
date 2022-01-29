@@ -1,7 +1,7 @@
 <template>
     <div id="app">
         <modal name="stamp-modal" :width="'70%'" :height="'auto'" :scrollable="true" :resizable="true">
-            <b-button size="lg" class="m-3" @click="CopyStamp">コピー</b-button>
+            <b-button size="lg" class="m-3" @click="CopyStamp"><i class="fas fa-clipboard"></i>　コピー</b-button>
             <b-card>
                 <div class="text-center" id="target">
                     <ul style="list-style-type: none;" class="text-center"  v-for="(time,index) in InputTime" :key="index">

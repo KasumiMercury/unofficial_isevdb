@@ -9,48 +9,46 @@
         </div>
         <div class="w-100">
             <div class="m-3">
-                <b-button v-if="isPaste == true" :pressed.sync="isPaste" variant="primary">このサイトで設定</b-button>
-                <b-button v-else :pressed.sync="isPaste" variant="primary">貼り付けで取得</b-button>
+                <b-button v-if="isPaste == true" :pressed.sync="isPaste" variant="primary"><i class="fas fa-search-plus"></i> このサイトで設定</b-button>
+                <b-button v-else :pressed.sync="isPaste" variant="primary"><i class="fas fa-paste"></i> 貼り付けで取得</b-button>
             </div>
             <div>
-            <b-button class="m-1" v-if="isPaste == false" @click="getTime">現在位置を取得</b-button>
+            <b-button class="m-1" size="lg" v-if="isPaste == false" @click="getTime"><i class="fas fa-search-plus"></i> 現在位置を取得</b-button>
             </div>
 
             <div class="mt-3">
             <b-button-group size="lg">   
-                <b-button class="p-1" @click="SSMinus">-10秒</b-button>
-                <b-button class="p-1" @click="SMinus">-1秒</b-button>
-                <b-button size="lg" class="p-1" @click="pauseVideo" v-if="playing">pause</b-button>
-                <b-button size="lg" class="p-1" @click="playVideo" v-else>play</b-button>
-                <b-button class="p-1" @click="SPlus">+1秒</b-button>
-                <b-button class="p-1" @click="SSPlus">+10秒</b-button>
+                <b-button class="p-1" @click="SSMinus"><i class="fas fa-angle-double-left"></i>　10秒</b-button>
+                <b-button class="p-1" @click="SMinus"><i class="fas fa-angle-left"></i>　1秒</b-button>
+                <b-button size="lg" class="p-1" @click="pauseVideo" v-if="playing"><i class="fas fa-pause fa-fw"></i>PAUSE</b-button>
+                <b-button size="lg" class="p-1" @click="playVideo" v-else><i class="fas fa-play fa-fw"></i>PLAY</b-button>
+                <b-button class="p-1" @click="SPlus"><i class="fas fa-angle-right"></i>　1秒</b-button>
+                <b-button class="p-1" @click="SSPlus"><i class="fas fa-angle-double-right"></i>　10秒</b-button>
             </b-button-group>
             </div>
 
             <b-row class="justify-content-md-center my-5" align-v="end">
-                <b-col>
-                     <b-button size="sm" @click="InputMinus">戻る</b-button>
+                <b-col  col lg="2">
+                     <b-button size="lg" @click="InputMinus"><i class="fas fa-caret-left"></i>　戻る</b-button>
                 </b-col>
-                <b-col cols="3">
-                    <b-form-input v-model.number="PMInput" type="number"></b-form-input>
+                <b-col cols="12" md="auto">
+                    <b-form-spinbutton id="PMinput" size="lg" v-model.number="PMInput" min="1" max="10000" inline></b-form-spinbutton>
+                    <label for="PMinput">秒</label>
                 </b-col>
-                <b-col cols="1">
-                    <p>秒</p>
-                </b-col>
-                <b-col>
-                     <b-button size="sm" @click="InputPlus">進む</b-button>
+                <b-col col lg="2">
+                     <b-button size="lg" @click="InputPlus">進む　<i class="fas fa-caret-right"></i></b-button>
                 </b-col>
             </b-row>
 
             <b-row class="justify-content-md-center my-5" align-v="center">
-                <b-col cols="4">
-                    <p>入力された時間へ飛びます→</p>
+                <b-col cols="12" md="auto">
+                    <label for="SeekInput">入力された時間へ飛びます：</label>
                 </b-col>
-                <b-col cols="4">
-                    <b-form-input v-model="SeekInput" type="text"></b-form-input>
+                <b-col col lg="2">
+                    <b-form-input id="SeekInput" v-model="SeekInput" type="text"></b-form-input>
                 </b-col>
-                <b-col>
-                     <b-button size="sm" @click="InputSeek">SeekTo</b-button>
+                <b-col col lg="2">
+                     <b-button @click="InputSeek"><i class="fas fa-forward"></i>　SeekTo</b-button>
                 </b-col>
             </b-row>
 
@@ -61,14 +59,14 @@
                             <p>必ず、「貼り付けで取得」にて設定した後に「このサイトで取得」にて追加してください。</p>
                         </div>
                         <b-row class="justify-content-md-center mx-3" align-v="end">
-                            <b-col>
+                            <b-col cols="12" md="auto">
                                 <p>記入例</p>
-                                <textarea rows="10" disabled>4:31:16\n32:00\n6:4:7\n6:09:08</textarea>
+                                <textarea rows="10" disabled>4:31:16&#13;&#10;32:00&#13;&#10;6:4:7&#13;&#10;6:09:08</textarea>
                             </b-col>
-                            <b-col>
+                            <b-col cols="12" md="auto">
                                 <textarea v-model="PastedTime" rows="15"></textarea>
                             </b-col>
-                            <b-col>
+                            <b-col cols="12" md="auto">
                                 <b-button class="m-3" @click="PasteToNow">変換</b-button>
                             </b-col>
                         </b-row>
@@ -87,7 +85,7 @@
                             </template>
                         </b-col>
                         <b-col sm="1"  class="my-1">
-                            <b-form-input  size="sm" type="text" v-model="InputTime[index]" disabled></b-form-input>
+                            <b-form-input  size="sm" type="text" v-model="InputTime[index]"></b-form-input>
                         </b-col>
                         <b-col sm="1"  class="my-1">
                             <div v-if="InputSwitch[index-1] == 'end'">
@@ -115,21 +113,21 @@
                             <label for="IsAdd">DBに追加</label>
                         </b-col>
                         <b-col lg="2" class="my-1">
-                            <b-button  size="sm" type="button" @click="removeInput(index)">削除</b-button>
+                            <b-button  size="sm" type="button" @click="removeInput(index)"><i class="fas fa-minus-circle"></i>削除</b-button>
                         
-                            <b-button  size="sm" type="button" @click="PlayAt(index)">SeekTo</b-button>
+                            <b-button  size="sm" type="button" @click="PlayAt(index)"><i class="fas fa-forward"></i>SeekTo</b-button>
                         </b-col>
                     </b-row>
                 </div>
             </b-card>
             <div>
-                <b-button class="m-3" size="lg" @click="ShowStamp">タイムスタンプを出力</b-button>
+                <b-button class="m-3" size="lg" @click="ShowStamp"><i class="fas fa-file-export"></i>　タイムスタンプを出力</b-button>
             </div>
             <div>
-                <b-button class="m-3" size="lg" @click="AddToDB">データ登録</b-button>
+                <b-button class="m-3" size="lg" @click="AddToDB"><i class="fas fa-cloud-upload-alt"></i>　データ登録</b-button>
             </div>
             <div>
-                <b-button @click="back">戻る</b-button>
+                <b-button @click="back"><i class="fas fa-arrow-circle-left"></i>　戻る</b-button>
             </div>
 
 
@@ -249,7 +247,7 @@ import Step4Modal from './add_step4.vue'
                 this.Collength = this.Collength + numTemp
             },
             PlayAt(index){
-                let InputTimeTemp = this.InputTime[index-1]; 
+                let InputTimeTemp = this.InputTime[index]; 
                 let SetHMS = InputTimeTemp.split(':');
                 console.log(SetHMS);
                 if(SetHMS.length == 2){

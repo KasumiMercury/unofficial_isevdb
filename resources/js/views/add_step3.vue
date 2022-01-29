@@ -72,7 +72,21 @@
                         </b-row>
                     </div>
                 </div>
-
+            <b-card>
+                <div>
+                    <h5 class="m-3" style="color: #0086A2;"><i class="fas fa-check-circle"></i>「現在時刻を取得」または「貼り付けから取得」→「変換」で時刻を取得してください。</h5>
+                    <h5 class="m-3" style="color: #0086A2;"><i class="fas fa-check-circle"></i>　Start/Endを選択してください。デフォルトはStartです。</h5>
+                    <p>Endに設定されたデータはDB登録時に終了時刻として使用されます。</p>
+                    <p>End設定はなくても登録できます。その場合は最後まで再生されます。</p>
+                    <p>タイムスタンプにはStartで設定されている時刻のみ反映されます。</p>
+                    <h5 class="m-3" style="color: #0086A2;"><i class="fas fa-check-circle"></i>　タイトルを入力してください。</h5>
+                    <p>DB登録時やタイムスタンプに反映されます。</p>
+                    <h5 class="m-3" style="color: #0086A2;"><i class="fas fa-check-circle"></i>　カテゴリーを選択してください。</h5>
+                    <p>タイムスタンプ用のデータはカテゴリー選択を無視しても影響はありません。</p>
+                    <h5 class="m-3" style="color: #0086A2;"><i class="fas fa-check-circle"></i>「DBに追加」のチェックを外すとDB登録時に除外されます。</h5>
+                    <p>タイムスタンプ用のみの時刻はチェックを外してください。</p>
+                </div>
+            </b-card>
             <b-card class="w-100">
                 <div class="w-100 my-5" v-for="(time,index) in this.InputTime" :key="'time'+index">
                     <b-row align-v="center">

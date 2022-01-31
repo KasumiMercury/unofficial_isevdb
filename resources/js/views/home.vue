@@ -78,7 +78,7 @@
 					<template #cell(play)="data">
 						<b-button v-if="data.item.status == 2" disabled size="sm"> private
 						</b-button>
-						<b-button v-else-if="data.item.status == 1" size="sm" class="member" v-on:click="$router.push('/top/player/'+data.item.id)"> MemberOnly
+						<b-button v-else-if="data.item.status == 1" size="sm" class="member" v-on:click="$router.push('/top/player/'+data.item.id)"><i class="fas fa-play fa-fw"></i> MemberOnly
 						</b-button>
 						<b-button v-else size="sm" class="play" v-on:click="$router.push('/top/player/'+data.item.id)"><i class="fas fa-play fa-fw"></i> Player
 						</b-button>

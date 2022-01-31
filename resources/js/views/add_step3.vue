@@ -61,7 +61,7 @@
                         <b-row class="justify-content-md-center mx-3" align-v="end">
                             <b-col cols="12" md="auto">
                                 <p>記入例</p>
-                                <textarea rows="10" disabled>4:31:16&#13;&#10;32:00&#13;&#10;6:4:7&#13;&#10;6:09:08</textarea>
+                                <textarea rows="10" disabled>4:31:16&#13;&#10;32:00&#13;&#10;6:4:07&#13;&#10;6:09:08</textarea>
                             </b-col>
                             <b-col cols="12" md="auto">
                                 <textarea v-model="PastedTime" rows="15"></textarea>
@@ -218,7 +218,7 @@ import Step4Modal from './add_step4.vue'
                     this.INTtime = Math.floor(time)
                     let hour = Math.floor(this.INTtime / 3600);
                     let min = Math.floor(this.INTtime % 3600 / 60);
-                    let rem = this.INTtime % 60;
+                    let rem = ( '00' + this.INTtime % 60 ).slice( -2 );
                     this.HMStime = hour+':'+min+':'+rem ; 
 
                     this.NowTime = this.tmp

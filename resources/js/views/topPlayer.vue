@@ -74,13 +74,18 @@ export default {
 			var self = this
 			axios.get('/api/top/player/' + this.id)
 				.then(function(response){
-					self.playerInfo = response.data.player
-                    self.current_member = response.data.player.member
-					let tag = self.iframe_F+self.playerInfo.VideoID+self.iframe_S+self.playerInfo.start+self.iframe_E+self.playerInfo.end+self.iframe_L
-					document.getElementById('Wrapper').innerHTML = tag
-                    self.Tweet["url"] = "https://isevdb.sakura.ne.jp/"+self.member+"/player/"+self.id
-                    self.Tweet["title"] = "いせぶい非公式:"+self.current_member.display+"DB No."+self.id
-                    self.Tweet["hash"] = "いせぶい非公式DB,"+self.current_member.display+"非公式DB,"+self.current_member.display
+					self.playerInfo = response.data.data
+					if(self.playerInfo.end == 0){
+						self.tag = self.iframe_F+self.playerInfo.VideoID+self.iframe_S+self.playerInfo.start+self.iframe_L
+					}else{
+						self.tag = self.iframe_F+self.playerInfo.VideoID+self.iframe_S+self.playerInfo.start+self.iframe_E+self.playerInfo.end+self.iframe_L
+					}
+					
+					
+					document.getElementById('Wrapper').innerHTML = self.tag
+					self.Tweet["url"] = "https://www.youtube.com/watch?v="+self.playerInfo.VideoID
+					self.Tweet["title"] = "非公式"+self.current_member.display+"DB No."+self.id+":https://isevdb.sakura.ne.jp/"+self.member+"/player/"+self.id
+					self.Tweet["hash"] = self.current_member.display+"非公式DB,"+self.current_member.display
 				})
 				.catch(error => console.log(error));
 		},

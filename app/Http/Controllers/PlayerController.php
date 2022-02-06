@@ -14,7 +14,7 @@ class PlayerController extends Controller
     public function home()
     {
         $members = Member::all();
-        $players = mayo::with('Member')->get();
+        $players = mayo::with('Member')->where('status','!=','3')->get();
         
         return [
             'members' => $members,

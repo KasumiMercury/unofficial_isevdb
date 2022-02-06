@@ -106,6 +106,8 @@ export default {
             .then(function (response) {
                 self.playerInfo = response.data;
                 console.log(self.playerInfo);
+                self.current_member = self.playerInfo.player.member;
+                console.log(self.current_member);
                 if (self.playerInfo.player.end == 0) {
                     self.tag =
                         self.iframe_F +

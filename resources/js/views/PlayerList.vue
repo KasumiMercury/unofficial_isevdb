@@ -1,6 +1,6 @@
 <template>
     <div>
-        <p>スマホは表を横にスライドできます</p>
+        <p>横にスライドできます</p>
         <b-table
             responsive
             hover

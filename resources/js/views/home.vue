@@ -154,7 +154,7 @@
         <div class="my-5">
             <b-card class="text-center shadow">
                 <h4>非公式いせぶいDB内新着順</h4>
-                <p>スマホは表を横にスライドできます</p>
+                <p>横にスライドできます</p>
                 <b-table
                     responsive
                     hover
